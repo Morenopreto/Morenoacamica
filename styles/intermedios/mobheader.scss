@@ -1,0 +1,18 @@
+header {
+  position: relative;
+  background-color: $bg-color;
+  height: 7.9vh;
+  min-width: 40px;
+  width: calc(100vw - 35px);
+  padding-left: 16px;
+  padding-right: 19px;
+  padding-top: 10px;
+  background-color: yellow;
+  opacity: 50%
+  ;
+  img {
+    position: static;
+    display: inline-block;
+    
+  }
+}

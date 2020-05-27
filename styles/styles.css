@@ -1,0 +1,99 @@
+body {
+  width: 100vw;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background-color: green;
+}
+
+footer {
+  width: 100vw;
+}
+
+@media screen and (max-width: 569px) and (min-width: 320px) {
+  header {
+    position: relative;
+    background-color: #fff;
+    height: 7.9vh;
+    min-width: 40px;
+    width: calc(100vw - 35px);
+    padding-left: 16px;
+    padding-right: 19px;
+    padding-top: 10px;
+    background-color: yellow;
+    opacity: 50%;
+  }
+  header img {
+    position: static;
+    display: inline-block;
+  }
+  main {
+    padding-left: 11px;
+    padding-right: 11px;
+    position: absolute;
+    overflow: hidden;
+    top: 44px;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background-color: red;
+    width: calc(100vw - 22px);
+  }
+  main #h1sec {
+    position: relative;
+  }
+  main #h1sec h1 {
+    font-family: IBMPlexSans;
+    font-size: 36px;
+    color: #060a24;
+    letter-spacing: 0;
+    line-height: 42px;
+    left: 0;
+    padding-bottom: 24px;
+  }
+  main #h1sec h1 #world {
+    text-decoration: line-through;
+  }
+  main #h1sec p {
+    font-family: IBMPlexMono;
+    font-size: 14px;
+    color: #060a24;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  main #h1sec #conobutt {
+    background-color: #00f3bb;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: calc(100% - 5px);
+    border: none;
+    font-family: IBMPlexMono-Medium;
+    font-size: 16px;
+    color: #060a24;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+    padding: 0;
+  }
+  main #epiframes {
+    background-color: white;
+    position: relative;
+    padding-top: 64px;
+  }
+  main #epiframes::after {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+    display: block;
+    width: 100vh;
+    height: 50px;
+    -webkit-transform: skewy(-4deg);
+            transform: skewy(-4deg);
+    left: 0;
+    z-index: -1;
+    top: 52px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

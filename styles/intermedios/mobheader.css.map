@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAGI,AAAA,MAAM,CAAA;EACF,gBAAgB,EAAE,GAAG;CAMxB;;AAPD,AAEI,MAFE,CAEF,GAAG,CAAA;EACC,KAAK,EAAE,KAAK;CAEf",
+    "sources": [
+        "mobheader.scss"
+    ],
+    "names": [],
+    "file": "mobheader.css"
+}
