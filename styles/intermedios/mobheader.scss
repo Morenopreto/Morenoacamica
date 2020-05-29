@@ -1,18 +1,40 @@
 header {
-  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
   background-color: $bg-color;
   height: 7.9vh;
   min-width: 40px;
-  width: calc(100vw - 35px);
-  padding-left: 16px;
-  padding-right: 19px;
-  padding-top: 10px;
   background-color: yellow;
-  opacity: 50%
-  ;
+  padding: 5px 20px;
+  justify-content: space-between;
+  align-items: center;
   img {
     position: static;
-    display: inline-block;
-    
+  }
+  input{ 
+    display: none;         
+    }
+    label{
+      &:hover{
+        border-right: solid black 3px;
+      }
+    }
+  }
+  nav {
+    display: none;
+    ul {
+     
+      list-style: none;
+      flex-flow: row nowrap;
+      li {
+        padding: 0 5px;
+        font-family: IBMPlexMono;
+        font-size: 16px;
+        color: #060a24;
+        letter-spacing: 0;
+        line-height: 28px;
+      }
+    }
   }
 }

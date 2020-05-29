@@ -1,12 +1,16 @@
-body {
-  width: 100vw;
+* {
+  margin: 0;
   padding: 0;
   border: 0;
   margin: 0;
-  background-color: green;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-footer {
+body {
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=general.css.map */
