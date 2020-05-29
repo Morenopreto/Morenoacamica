@@ -12,6 +12,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 @media screen and (max-width: 569px) and (min-width: 320px) {
@@ -21,8 +25,8 @@ body {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     width: 100%;
     background-color: #fff;
     height: 7.9vh;
@@ -42,38 +46,81 @@ body {
   header input {
     display: none;
   }
-  header input:checked {
-    width: 100px;
+  header #menu:focus ~ .menu,
+  header #menu:hover ~ .menu {
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
+    -webkit-animation-name: visibility;
+            animation-name: visibility;
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+    visibility: visible;
+    width: 100%;
+    height: 224px;
+    z-index: 9999;
   }
   header nav {
-    display: none;
+    visibility: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 224px;
+    background: #0000ec;
+    margin-top: 10px;
   }
   header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     list-style: none;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-left: 16px;
   }
   header nav ul li {
-    padding: 0 5px;
     font-family: IBMPlexMono;
     font-size: 16px;
-    color: #060a24;
+    color: #ffffff;
     letter-spacing: 0;
     line-height: 28px;
   }
+  @-webkit-keyframes visibility {
+    0% {
+      opacity: 0%;
+      scale: 0%;
+    }
+    100% {
+      opacity: 100%;
+      scale: 100%;
+    }
+  }
+  @keyframes visibility {
+    0% {
+      opacity: 0%;
+      scale: 0%;
+    }
+    100% {
+      opacity: 100%;
+      scale: 100%;
+    }
+  }
   main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding-left: 11px;
     padding-right: 11px;
-    position: absolute;
     overflow: hidden;
-    top: 44px;
-    padding: 0;
-    border: 0;
-    margin: 0;
     background-color: red;
-    width: calc(100vw - 22px);
+    width: 100%;
+    opacity: 70%;
   }
   main #h1sec {
     position: relative;
