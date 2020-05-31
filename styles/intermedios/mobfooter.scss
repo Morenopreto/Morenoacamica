@@ -1,0 +1,30 @@
+footer {
+  background-color: $bg-color;
+  width: 100%;
+  height: 121px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  z-index: 2;
+  text-align: center;
+  p {
+    width: 100%;
+    height: 22px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-family: $fontmono;
+    font-size: 14px;
+    color: $colorr;
+    letter-spacing: 0;
+    line-height: 22px;
+  }
+  a {
+    width: 20%;
+    text-decoration: none;
+    text-decoration-color: $colorr;
+
+    i {
+      color: $colorr;
+    }
+  }
+}

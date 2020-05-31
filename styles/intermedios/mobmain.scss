@@ -3,13 +3,22 @@ main {
   display: flex;
   flex-flow: row wrap;
   overflow: hidden;
-  background-color: red;
+  // background-color: red;
   width: 100%;
-  opacity: 70%;
+  // opacity: 70%;
+  h2 {
+    font-family: $fontsans;
+    font-weight: 300;
+    font-size: 36px;
+    color: $colorr;
+    letter-spacing: 0;
+    line-height: 42px;
+    margin-left: 16px;
+  }
 
   #h1sec {
-    background-color: green;
-    opacity: 70%;
+    // background-color: green;
+    // opacity: 70%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -17,32 +26,31 @@ main {
     h1 {
       font-weight: 300;
       font-size: 36px;
-      color: #060a24;
+      color: $colorr;
       letter-spacing: 0;
       line-height: 42px;
-      padding: 29px 10% 16px 16px;
+      padding: 29px 10% 16px 5%;
       #world {
         text-decoration: line-through;
       }
     }
     p {
-      padding: 0 5px 36px 16px;
-      font-family: $fontmono;
-      font-size: 14px;
-      color: #060a24;
-      letter-spacing: 0;
-      line-height: 22px;
+      padding-bottom: 11.25%;
     }
-    // #conobutt {
-
-    // }
   }
-
+  p {
+    padding: 0 16px 0px 16px;
+    font-family: $fontmono;
+    font-size: 14px;
+    color: $colorr;
+    letter-spacing: 0;
+    line-height: 22px;
+  }
   .botones {
     justify-content: center;
     width: 97%;
     height: 48px;
-    margin: 0 16px 24px 16px;
+    margin: 0 16px 7.5% 16px;
     background-color: $bot-color;
     border: none;
     color: $colorr;
@@ -56,65 +64,145 @@ main {
     }
   }
   #iframesec {
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;}
-  
-  h2 {
-    margin: 64px 0px 15.5px 16px;
-    font-family: $fontsans;
-    font-weight: 300;
-    font-size: 36px;
-    color: $colorr;
-    letter-spacing: 0;
-    line-height: 42px;
-  }
-  #episodios{
-    color: $bg-color;
-  }
-  .spoti {
-    width: 100%;
-    margin: 5.5px 0px 5.5px 0px;
-    padding: 0px 11px 0px 11px;
-  }
-  .blueline {
+    // display: flex;
+    // flex-flow: row wrap;
+    // width: 100%;
+    #episodios {
+      color: $bg-color;
+      margin: 20% 0px 15.5px 16px;
+    }
+    .spoti {
+      width: 100%;
+      margin: 5.5px 0px 5.5px 0px;
+      padding: 0px 11px 0px 11px;
+    }
+    
     &::after {
       content: "";
       background-image: $bg-skew-color;
       position: absolute;
       width: 100%;
       height: 1203.5px;
-      transform: skewy(-5deg);
+      transform: skewy(-5deg) translate(0px, 16px);
       left: 0;
-      top: 367px;
+      top: 63%;
       z-index: -1;
     }
+    @media screen and (min-width:520px) {
+      #episodios{
+        margin-top: 15%;
+      }
+      .spoti {
+        width: 49%;
+      }
+      &::after{
+        height: 720px;
+        // transform: skewy(-5deg) translate(0px, -61px);
+      }
+    }
   }
-  #phonesect{
+  #phonesect {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-   
-    img{
-      width: 360px;
-      height: 519px;
-      position: relative;   
-      margin-top: 42.5px; 
-      
-    }
-    h2{ 
-      margin-top: 27px;
-      margin-bottom: 8px;
-      margin-right: 50px;
-    }
-  }
-    
-   @media screen and (max-width: 340px){
-    #phoneimg{
+    width: 100%;
+    img {
       width: 360px;
       height: 519px;
       position: relative;
-      left: -6%;
       margin-top: 42.5px;
     }
-}}
+    #dedonde {
+      display: flex;
+      width: 100%;
+      flex-flow: row wrap;
+      h2 {
+        margin-top: 27px;
+        margin-bottom: 8px;
+        margin-right: 50px;
+      }
+      p {
+        padding-bottom: 54px;
+      }
+    }
+  }
+  #imgssect {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    h2 {
+      margin-top: 0px;
+      margin-bottom: 14px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    @media screen and (min-width: 520px){
+      img{ width: 50%;
+      height: auto;}
+      
+    }
+  }
+  #iconsect {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
+    h2{
+      margin-top: 48px;
+      margin-bottom: 37px;
+    }
+    img {
+      width: 104px;
+      height: 104px;
+      margin: 0px 108px 13px 108px;
+    }
+    .iconlabelmarg{
+      margin-bottom: 65px;
+    }
+    #labic1{
+      margin-bottom: 49px;
+    }
+    label {
+      width: 288px;
+      margin: 0px 16px 42px 16px;
+      font-family: $fontsans;
+      font-weight: 600;
+      font-size: 24px;
+      color: #060a24;
+      letter-spacing: 0;
+      text-align: center;
+    }
+  }
+
+  #lastmsect {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    overflow: hidden;
+    #newsdiv {
+      display: flex;
+    flex-flow: row wrap;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+    h2{
+      margin: 64px 16px 36px 16px;
+      color: $bg-color;
+    }
+      &::after {
+        content: "";
+        background-image: $bg-skew-color;
+        position: absolute;
+        width: 100%;
+        height: 341px;
+        transform: skewy(-5deg) translate(0px, 15px);
+        z-index: -1;
+      }
+      button{
+        margin-bottom: 67px;
+      }
+    }
+  }
+}
