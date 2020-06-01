@@ -17,22 +17,28 @@
   </head>
   <body>
     <header id="prueba">
-      <img src="assets/logo.svg" alt="logo-blue-dot" />
-      <div id="menu" tabindex="1">
-        <input type="checkbox" name="" id="cbox" />
-        <label for="cbox"><i class="fas fa-bars"></i></label>
+      
+      <div class="navdiv">
+        <img src="assets/logo.svg" alt="logo-blue-dot" />
+        <input
+          type="checkbox"
+          name="menuinput"
+          id="menuinput"
+          class="menucheckbox"
+        />
+        <label for="menuinput" class="burger menu" tabindex="1"><span></span></label>
+        <nav>
+          <ul>
+            <li class="navli"><a tabindex="2">EPISODIOS</a></li>
+            <li class="navli"><a tabindex="3">NOSOTROS</a></li>
+            <li class="navli"><a tabindex="4">ENTREVISTAS</a></li>
+            <li class="navli"><a tabindex="5">TÓPICOS</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="menu">
-        <ul>
-          <li class="navli">EPISODIOS</li>
-          <li class="navli">NOSOTROS</li>
-          <li class="navli">ENTREVISTAS</li>
-          <li class="navli">TÓPICOS</li>
-        </ul>
-      </nav>
     </header>
-
     <main>
+      <span id="navspan" class="menu"></span>
       <section id="h1sec">
         <h1>
           Hello <span id="world">world</span> pale blue dot<span id="dot"

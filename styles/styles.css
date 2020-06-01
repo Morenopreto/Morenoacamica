@@ -8,8 +8,17 @@
   outline: none;
 }
 
+*,
+*:before,
+*:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,100 +48,149 @@ header {
           align-items: center;
 }
 
-header img {
+header div {
+  position: relative;
+  float: right;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0px 0px 0px;
+  color: #060a24;
+}
+
+header div img {
+  float: left;
   position: static;
   margin: 10px 0px 0px 16px;
 }
 
-header input {
+header .menucheckbox {
   display: none;
 }
 
-header #menu:focus ~ .menu,
-header #menu:hover ~ .menu {
-  -webkit-transform-origin: top right;
-          transform-origin: top right;
-  -webkit-animation-name: visibility;
-          animation-name: visibility;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  visibility: visible;
-  width: 100%;
-  height: 224px;
-  z-index: 9999;
+header .burger {
+  position: relative;
+  float: right;
+  margin-left: 10px;
+  width: 60px;
+  height: 44px;
+  cursor: pointer;
 }
 
-header #menu:focus ~ .menu::after,
-header #menu:hover ~ .menu::after {
+header .burger span,
+header .burger span:after,
+header .burger span:before {
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background: #060a24;
+  top: 24px;
+  right: 19px;
+}
+
+header .burger span:after,
+header .burger span:before {
   content: "";
-  z-index: -1;
+  right: 0;
+}
+
+header .burger span:before {
+  top: -5px;
+}
+
+header .burger span:after {
+  top: 5px;
+}
+
+header .menucheckbox:checked + .burger span {
+  height: 0;
+  width: 0;
+}
+
+header .menucheckbox:checked + .burger span:before,
+header .menucheckbox:checked + .burger span:after {
+  top: -2px;
+  right: -5px;
+}
+
+header .menucheckbox:checked + .burger span:before {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  width: 18px;
+}
+
+header .menucheckbox:checked + .burger span:after {
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+  width: 18px;
+}
+
+header .navdiv {
+  position: relative;
+  float: left;
   width: 100%;
-  height: 224px;
+  margin: 0;
+  min-height: 50px;
+  overflow: hidden;
 }
 
-header i {
-  margin: 10px 20px 0px 0px;
-}
-
-header nav {
-  font-family: "IBM Plex Mono", monospace;
-  visibility: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+header .navdiv ul {
+  position: relative;
+  float: left;
   width: 100%;
-  height: 224px;
-  background: #0000ec;
-  margin-top: 10px;
-}
-
-header nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   list-style: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-left: 16px;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
 }
 
-header nav ul li {
-  font-family: IBMPlexMono;
-  font-size: 16px;
-  color: #ffffff;
-  letter-spacing: 0;
-  line-height: 28px;
+header .navdiv ul a {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 0;
+  line-height: 50px;
+  padding: 0 15px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #fff;
+  text-align: left;
 }
 
-@-webkit-keyframes visibility {
-  0% {
-    opacity: 0%;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% {
-    opacity: 100%;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+header .navdiv ul a:hover, header .navdiv ul a:active, header .navdiv ul a:focus, header .navdiv ul a:visited {
+  text-decoration: none;
+  background: linear-gradient(248deg, #0000ff -32%, #00f3bb 88%);
 }
 
-@keyframes visibility {
-  0% {
-    opacity: 0%;
-    -webkit-transform: scale(0);
-            transform: scale(0);
+header #menuinput:checked ~ nav ul a {
+  height: 50px;
+}
+
+@media screen and (min-width: 520px) {
+  #menu {
+    display: none;
   }
-  100% {
-    opacity: 100%;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  nav {
+    visibility: visible;
+    width: 40%;
+    height: 100%;
+    background-color: #fff;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  nav ul {
+    width: 100%;
+    padding: 0px 100px 0px 0px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav ul li {
+    color: #060a24;
   }
 }
 
@@ -216,7 +274,7 @@ main .botones {
 }
 
 main .botones:hover {
-  background-color: linear-gradient(248deg, #0000ff -32%, #00f3bb 88%);
+  background: linear-gradient(248deg, #0000ff -32%, #00f3bb 88%);
 }
 
 main #iframesec #episodios {
@@ -239,7 +297,7 @@ main #iframesec::after {
   -webkit-transform: skewy(-5deg) translate(0px, 16px);
           transform: skewy(-5deg) translate(0px, 16px);
   left: 0;
-  top: 63%;
+  top: 51%;
   z-index: -1;
 }
 

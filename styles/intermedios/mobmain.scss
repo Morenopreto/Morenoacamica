@@ -60,7 +60,7 @@ main {
     text-align: center;
     line-height: 22px;
     &:hover {
-      background-color: $hov-bot-color;
+      background: $hov-bot-color;
     }
   }
   #iframesec {
@@ -85,7 +85,7 @@ main {
       height: 1203.5px;
       transform: skewy(-5deg) translate(0px, 16px);
       left: 0;
-      top: 63%;
+      top: 51%;
       z-index: -1;
     }
     @media screen and (min-width:520px) {

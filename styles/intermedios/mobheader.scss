@@ -8,69 +8,135 @@ header {
   // background-color: yellow;
   justify-content: space-between;
   align-items: center;
-  img {
-    position: static;
-    margin: 10px 0px 0px 16px ;
-  }
-  input {
-    display: none;
-  }
 
-  #menu:focus ~ .menu,
-  #menu:hover ~ .menu {
-    transform-origin: top right;
-    animation-name: visibility;
-    animation-duration: 0.3s;
-    visibility: visible;
+  div {
+    position: relative;
+    float: right;
     width: 100%;
-    height: 224px;
-    z-index: 9999;
-    &::after{
-      content: "";
-      z-index: -1;
-      width: 100%;
-      height: 224px;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    color: $colorr;
+    img {
+      float: left;
+      position: static;
+      margin: 10px 0px 0px 16px;
     }
   }
-  i{
-    margin: 10px 20px 0px 0px;
-  }
-  nav {
-    font-family: $fontmono;
-    visibility: hidden;
-    display: flex;
-    width: 100%;
-    height: 224px;
-    background: #0000ec;
-    margin-top: 10px;
 
-    ul {
-      display: flex;
+  .menucheckbox {
+    display: none;
+  }
+  .burger {
+    position: relative;
+    float: right;
+    margin-left: 10px;
+    width: 60px;
+    height: 44px;
+    cursor: pointer;
+
+    & span,
+    & span:after,
+    & span:before {
+      position: absolute;
+      width: 18px;
+      height: 2px;
+      background: $colorr;
+      top: 24px;
+      right: 19px;
+    }
+    & span:after,
+    & span:before {
+      content: "";
+      right: 0;
+    }
+
+    & span:before {
+      top: -5px;
+    }
+    & span:after {
+      top: 5px;
+    }
+  }
+  .menucheckbox:checked + .burger span {
+    height: 0;
+    width: 0;
+  }
+  .menucheckbox:checked + .burger span:before,
+  .menucheckbox:checked + .burger span:after {
+    top: -2px;
+    right: -5px;
+  }
+  .menucheckbox:checked + .burger span:before {
+    transform: rotate(225deg);
+    width: 18px;
+  }
+  .menucheckbox:checked + .burger span:after {
+    transform: rotate(-225deg);
+    width: 18px;
+  }
+  .navdiv {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 0;
+    min-height: 50px;
+    overflow: hidden;
+
+    & ul {
+      position: relative;
+      float: left;
+      width: 100%;
       list-style: none;
-      flex-flow: row nowrap;
-      flex-direction: column;
-      justify-content: space-around;
-      padding-left: 16px;
-      li {
-        font-family: IBMPlexMono;
-        font-size: 16px;
-        color: #ffffff;
-        letter-spacing: 0;
-        line-height: 28px;
+      margin: 0;
+      padding: 0;
+      background: $bg-skew-color;
+    }
+    & ul a {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 0;
+      line-height: 50px;
+      padding: 0 15px;
+      text-decoration: none;
+      overflow: hidden;
+      color: $bg-color;
+      text-align: left;
+      &:hover,
+      &:active,
+      &:focus,
+      &:visited {
+        text-decoration: none;
+        background: $hov-bot-color;
       }
     }
   }
-}
-
-@keyframes visibility {
-  0% {
-    opacity: 0%;
-    transform: scale(0) ;
-    
+  #menuinput:checked ~ nav ul a {
+    height: 50px;
   }
+}
+@media screen and (min-width: 520px) {
+  & {
+    height: 80px;
+  }
+  #menu {
+    display: none;
+  }
+  nav {
+    visibility: visible;
+    width: 40%;
+    height: 100%;
+    background-color: $bg-color;
+    justify-content: flex-end;
 
-  100% {
-    opacity: 100%;
-    transform: scale(1) ;
+    ul {
+      width: 100%;
+      padding: 0px 100px 0px 0px;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      li {
+        color: $colorr;
+      }
+    }
   }
 }

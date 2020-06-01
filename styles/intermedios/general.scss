@@ -6,8 +6,15 @@
   box-sizing: border-box;
   outline: none;
 }
+*,
+*:before,
+*:after {
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        box-sizing: border-box;
+}
 body {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
 
