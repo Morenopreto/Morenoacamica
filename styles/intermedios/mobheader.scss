@@ -1,13 +1,10 @@
 header {
   font-family: $fontmono;
-  display: flex;
-  flex-flow: row wrap;
+  display: block;
   width: 100%;
   background-color: $bg-color;
   height: 44px;
-  // background-color: yellow;
-  justify-content: space-between;
-  align-items: center;
+  border-bottom: rgba(0, 0, 0, 0.3) 1.5px solid;
 
   div {
     position: relative;
@@ -114,29 +111,73 @@ header {
   #menuinput:checked ~ nav ul a {
     height: 50px;
   }
-}
-@media screen and (min-width: 520px) {
-  & {
-    height: 80px;
-  }
-  #menu {
-    display: none;
-  }
-  nav {
-    visibility: visible;
-    width: 40%;
-    height: 100%;
-    background-color: $bg-color;
-    justify-content: flex-end;
 
-    ul {
-      width: 100%;
-      padding: 0px 100px 0px 0px;
-      flex-flow: row nowrap;
+  @media screen and (min-width: 520px) {
+    & {
+      height: 80px;
+    }
+    span,
+    span:after,
+    span:before,
+    label {
+      display: none;
+    }
+    .navdiv {
+      display: flex;
+      flex-flow: row wrap;
       justify-content: space-between;
-      li {
-        color: $colorr;
+      align-items: center;
+      height: 100%;
+
+      nav {
+        width: 90%;
+        max-width: 582px;
+
+        ul {
+          display: flex;
+          flex: row wrap;
+          width: 100%;
+          justify-content: space-around;
+          background: none;
+          align-items: center;
+          li {
+            width: 25%;
+            a {
+              width: 100%;
+              height: 100%;
+              color: $colorr;
+              text-align: center;
+
+              &:hover,            
+              &:focus,
+              &:visited {
+                text-decoration: none;
+                background: none;
+                // color: $bot-color;
+                font-size: 20px;
+              }
+            }
+          }
+        }
       }
     }
+    // a partir de  aca es lo viejo
+    // nav {
+    //   visibility: visible;
+    //   width: 40%;
+    //   height: 100%;
+    //   background-color: $bg-color;
+    //   justify-content: flex-end;
+
+    //   ul {
+    //     width: 100%;
+    //     padding: 0px 100px 0px 0px;
+    //     flex-flow: row nowrap;
+    //     justify-content: space-between;
+    //     li {
+    //       color: $colorr;
+    //     }
+    //   }
+    // }
   }
 }
