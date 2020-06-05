@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +6,15 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: none;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -18,8 +26,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 header {
@@ -99,16 +105,12 @@ header .menucheckbox:checked + .burger span:before {
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
   width: 18px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 header .menucheckbox:checked + .burger span:after {
   -webkit-transform: rotate(-225deg);
           transform: rotate(-225deg);
   width: 18px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 header .navdiv {
@@ -128,9 +130,6 @@ header .navdiv ul {
   margin: 0;
   padding: 0;
   background: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
-  -webkit-transition: none;
-  transition: none;
-  z-index: 100;
 }
 
 header .navdiv ul a {
@@ -147,16 +146,15 @@ header .navdiv ul a {
 }
 
 header .navdiv ul a:hover, header .navdiv ul a:active, header .navdiv ul a:focus, header .navdiv ul a:visited {
+  text-decoration: none;
   background: linear-gradient(248deg, #0000ff -32%, #00f3bb 88%);
 }
 
 header #menuinput:checked ~ nav ul a {
   height: 50px;
-  -webkit-transition: none;
-  transition: none;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 520px) {
   header {
     height: 80px;
   }
@@ -200,7 +198,6 @@ header #menuinput:checked ~ nav ul a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    z-index: 100;
   }
   header .navdiv nav ul li {
     width: 25%;
@@ -249,14 +246,9 @@ main #h1sec {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  width: 100%;
-  margin-left: 16px;
-}
-
-@media screen and (min-width: 840px) {
-  main #h1sec {
-    margin-left: 200px;
-  }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main #h1sec h1 {
@@ -265,52 +257,15 @@ main #h1sec h1 {
   color: #060a24;
   letter-spacing: 0;
   line-height: 42px;
-  padding: 29px 10% 16px 0;
+  padding: 29px 10% 16px 5%;
 }
 
 main #h1sec h1 #world {
   text-decoration: line-through;
 }
 
-main #h1sec #h1p {
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  width: 100%;
-  height: 105px;
-}
-
-@media screen and (max-width: 519px) {
-  main #h1sec #h1p::after {
-    content: "Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.";
-    position: absolute;
-    width: 90%;
-    max-width: 350px;
-    height: 66px;
-    max-height: 100px;
-    z-index: 1;
-  }
-}
-
-@media screen and (min-width: 520px) {
-  main #h1sec #h1p::after {
-    content: "El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.";
-    position: absolute;
-    width: 90vw;
-    max-width: 628px;
-    height: 66px;
-    max-height: 100px;
-    z-index: 1;
-  }
-}
-
-main #h1sec #conobutt {
-  margin-left: 0;
+main #h1sec p {
+  padding-bottom: 11.25%;
 }
 
 main p {
@@ -326,7 +281,7 @@ main .botones {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 288px;
+  width: 97%;
   height: 48px;
   margin: 0 16px 7.5% 16px;
   background-color: #00f3bb;
@@ -351,15 +306,8 @@ main #iframesec #episodios {
 
 main #iframesec .spoti {
   width: 100%;
-  max-width: 584px;
   margin: 5.5px 0px 5.5px 0px;
   padding: 0px 11px 0px 11px;
-}
-
-@media screen and (min-width: 520px) {
-  main #iframesec .spoti {
-    width: 49%;
-  }
 }
 
 main #iframesec::after {
@@ -371,37 +319,19 @@ main #iframesec::after {
   -webkit-transform: skewy(-5deg) translate(0px, 16px);
           transform: skewy(-5deg) translate(0px, 16px);
   left: 0;
-  top: 63%;
+  top: 51%;
   z-index: -1;
-  -webkit-transition: none;
-  transition: none;
 }
 
 @media screen and (min-width: 520px) {
+  main #iframesec #episodios {
+    margin-top: 15%;
+  }
+  main #iframesec .spoti {
+    width: 49%;
+  }
   main #iframesec::after {
     height: 720px;
-    top: 68%;
-  }
-  main #iframesec #episodios {
-    margin-top: 15%;
-  }
-}
-
-@media screen and (min-width: 425px) and (max-width: 519px) {
-  main #iframesec #episodios {
-    margin-top: 15%;
-  }
-  main #iframesec::after {
-    height: 1285px;
-  }
-}
-
-@media screen and (min-width: 840px) {
-  main #iframesec #episodios {
-    margin-left: 200px;
-  }
-  main #iframesec #if1, main #iframesec #if3 {
-    margin-left: 100px;
   }
 }
 
@@ -426,13 +356,6 @@ main #phonesect img {
   margin-top: 42.5px;
 }
 
-@media screen and (min-width: 730px) {
-  main #phonesect img {
-    width: 457.6px;
-    height: 660px;
-  }
-}
-
 main #phonesect #dedonde {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,22 +377,6 @@ main #phonesect #dedonde p {
   padding-bottom: 54px;
 }
 
-@media screen and (min-width: 1025px) {
-  main #phonesect #phonesect {
-    width: 50%;
-  }
-  main #phonesect #dedonde {
-    width: 50%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
 main #imgssect {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -484,24 +391,16 @@ main #imgssect {
 main #imgssect h2 {
   margin-top: 0px;
   margin-bottom: 14px;
-  width: 100%;
 }
 
 main #imgssect img {
-  width: 100vw;
+  width: 100%;
   height: auto;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 520px) {
   main #imgssect img {
-    width: 50vw;
-    height: auto;
-  }
-}
-
-@media screen and (min-width: 730px) {
-  main #imgssect img {
-    width: 33.33vw;
+    width: 50%;
     height: auto;
   }
 }
@@ -638,11 +537,5 @@ footer a {
 
 footer a i {
   color: #060a24;
-}
-
-@media screen and (min-width: 420px) and (max-width: 760px) {
-  footer {
-    height: 133px;
-  }
 }
 /*# sourceMappingURL=styles.css.map */

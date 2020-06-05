@@ -8,6 +8,15 @@
   outline: none;
 }
 
+*,
+*:before,
+*:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   width: 100%;
   display: -webkit-box;
@@ -17,7 +26,5 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 /*# sourceMappingURL=general.css.map */

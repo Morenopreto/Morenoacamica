@@ -17,11 +17,16 @@ main {
   }
 
   #h1sec {
-    // background-color: green;
-    // opacity: 70%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    width: 100%;
+    margin-left: 16px;
+    
+    @media screen and (min-width:840px){
+      margin-left: 200px;
+    }
+    
+    
 
     h1 {
       font-weight: 300;
@@ -29,14 +34,46 @@ main {
       color: $colorr;
       letter-spacing: 0;
       line-height: 42px;
-      padding: 29px 10% 16px 5%;
+      padding: 29px 10% 16px 0;
       #world {
         text-decoration: line-through;
       }
     }
-    p {
-      padding-bottom: 11.25%;
+    #h1p {
+      padding: 0;
+      display: flex;
+      flex-flow: row wrap;
+      width: 100%;
+      height: 105px;
+      
+      @media screen and (max-width: 519px) {
+        &::after {
+          content: "Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.";
+          position: absolute;
+          width: 90%;
+          max-width: 350px;
+          height: 66px;
+          max-height: 100px;
+          z-index: 1;
+        }
+      }
+      @media screen and (min-width: 520px) {
+        &::after {
+          content: "El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.";
+          position: absolute;
+          width: 90vw;
+          max-width: 628px;
+          height: 66px;
+          max-height: 100px;
+          z-index: 1;
+        }
+      }
+      
     }
+    #conobutt{
+      margin-left:0;
+    }
+
   }
   p {
     padding: 0 16px 0px 16px;
@@ -48,7 +85,8 @@ main {
   }
   .botones {
     justify-content: center;
-    width: 97%;
+    width: 288px;
+
     height: 48px;
     margin: 0 16px 7.5% 16px;
     background-color: $bot-color;
@@ -65,19 +103,24 @@ main {
     }
   }
   #iframesec {
-    // display: flex;
-    // flex-flow: row wrap;
-    // width: 100%;
+    
     #episodios {
       color: $bg-color;
       margin: 20% 0px 15.5px 16px;
+      
     }
     .spoti {
       width: 100%;
+      max-width: 584px;
       margin: 5.5px 0px 5.5px 0px;
       padding: 0px 11px 0px 11px;
     }
-    
+    @media screen and (min-width: 520px) {
+      .spoti {
+        width: 49%;
+      }
+    }
+
     &::after {
       content: "";
       background-image: $bg-skew-color;
@@ -86,19 +129,35 @@ main {
       height: 1203.5px;
       transform: skewy(-5deg) translate(0px, 16px);
       left: 0;
-      top: 51%;
+      top: 63%;
       z-index: -1;
+      transition: none;
     }
-    @media screen and (min-width:520px) {
-      #episodios{
+
+    @media screen and (min-width: 520px) {
+      &::after {
+        height: 720px;
+        top: 68%;
+        // transform: skewy(-5deg) translate(0px, -61px);
+      }
+      #episodios {
         margin-top: 15%;
       }
-      .spoti {
-        width: 49%;
+    }
+    @media screen and (min-width: 425px) and (max-width: 519px) {
+      #episodios {
+        margin-top: 15%;
       }
-      &::after{
-        height: 720px;
+      &::after {
+        height: 1285px;
         // transform: skewy(-5deg) translate(0px, -61px);
+      }
+    }
+    @media screen and (min-width:840px){
+      #episodios{
+      margin-left: 200px;}
+      #if1, #if3{
+        margin-left: 100px;
       }
     }
   }
@@ -112,6 +171,11 @@ main {
       height: 519px;
       position: relative;
       margin-top: 42.5px;
+      @media screen and(min-width:730px){
+       &{ width: 457.6px;
+        height: 660px;}        
+      }
+
     }
     #dedonde {
       display: flex;
@@ -126,6 +190,16 @@ main {
         padding-bottom: 54px;
       }
     }
+    @media screen and (min-width: 1025px){
+      #phonesect{
+        width:50%;
+      }
+      #dedonde{width: 50%;
+      flex-direction: column;
+      justify-content: center;
+      }
+      
+    }
   }
   #imgssect {
     display: flex;
@@ -134,13 +208,20 @@ main {
     h2 {
       margin-top: 0px;
       margin-bottom: 14px;
+      width: 100%;
     }
     img {
-      width: 100%;
-      height: auto;
+      width: 100vw;
+      height: auto;}
+    
+    @media screen and (min-width: 425px) {
+      img {
+        width: 50vw;
+        height: auto;
+      }
     }
-    @media screen and (min-width: 520px){
-      img{ width: 50%;
+    @media screen and(min-width:730px){
+      img{width: 33.33vw;
       height: auto;}
       
     }
@@ -150,7 +231,7 @@ main {
     flex-flow: row wrap;
     width: 100%;
     justify-content: center;
-    h2{
+    h2 {
       margin-top: 48px;
       margin-bottom: 37px;
     }
@@ -159,10 +240,10 @@ main {
       height: 104px;
       margin: 0px 108px 13px 108px;
     }
-    .iconlabelmarg{
+    .iconlabelmarg {
       margin-bottom: 65px;
     }
-    #labic1{
+    #labic1 {
       margin-bottom: 49px;
     }
     label {
@@ -184,14 +265,14 @@ main {
     overflow: hidden;
     #newsdiv {
       display: flex;
-    flex-flow: row wrap;
-    overflow: hidden;
-    justify-content: center;
-    text-align: center;
-    h2{
-      margin: 64px 16px 36px 16px;
-      color: $bg-color;
-    }
+      flex-flow: row wrap;
+      overflow: hidden;
+      justify-content: center;
+      text-align: center;
+      h2 {
+        margin: 64px 16px 36px 16px;
+        color: $bg-color;
+      }
       &::after {
         content: "";
         background-image: $bg-skew-color;
@@ -201,7 +282,7 @@ main {
         transform: skewy(-5deg) translate(0px, 15px);
         z-index: -1;
       }
-      button{
+      button {
         margin-bottom: 67px;
       }
     }

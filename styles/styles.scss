@@ -1,10 +1,6 @@
+@import "intermedios/general";
+@import "intermedios/variables";
+@import "intermedios/mobheader";
+@import "intermedios/mobmain";
+@import "intermedios/mobfooter";
 
-@import 'intermedios/general';
-@import 'intermedios/variables';
-
-
-// @media screen and (max-width: 569px) and (min-width: 320px){
-    @import 'intermedios/mobheader';
-    @import 'intermedios/mobmain';
-   @import 'intermedios/mobfooter.scss';
-// }
