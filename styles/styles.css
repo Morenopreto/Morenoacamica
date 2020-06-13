@@ -28,7 +28,6 @@ header {
   width: 100%;
   background-color: #fff;
   height: 44px;
-  border-bottom: rgba(0, 0, 0, 0.3) 1.5px solid;
 }
 
 header div {
@@ -211,8 +210,15 @@ header #menuinput:checked ~ nav ul a {
     color: #060a24;
     text-align: center;
   }
+  header .navdiv nav ul li a:hover {
+    color: #00f3bb;
+    text-decoration: line-through;
+  }
+  header .navdiv nav ul li a:active {
+    color: #060a24;
+    text-decoration: line-through;
+  }
   header .navdiv nav ul li a:hover, header .navdiv nav ul li a:focus, header .navdiv nav ul li a:visited {
-    text-decoration: none;
     background: none;
     font-size: 20px;
   }
@@ -239,78 +245,6 @@ main h2 {
   letter-spacing: 0;
   line-height: 42px;
   margin-left: 16px;
-}
-
-main #h1sec {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  width: 100%;
-  margin-left: 16px;
-}
-
-@media screen and (min-width: 840px) {
-  main #h1sec {
-    margin-left: 200px;
-  }
-}
-
-main #h1sec h1 {
-  font-weight: 300;
-  font-size: 36px;
-  color: #060a24;
-  letter-spacing: 0;
-  line-height: 42px;
-  padding: 29px 10% 16px 0;
-}
-
-main #h1sec h1 #world {
-  text-decoration: line-through;
-}
-
-main #h1sec #h1p {
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  width: 100%;
-  height: 105px;
-}
-
-@media screen and (max-width: 519px) {
-  main #h1sec #h1p::after {
-    content: "Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.";
-    position: absolute;
-    width: 90%;
-    max-width: 350px;
-    height: 66px;
-    max-height: 100px;
-    z-index: 1;
-  }
-}
-
-@media screen and (min-width: 520px) {
-  main #h1sec #h1p::after {
-    content: "El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.";
-    position: absolute;
-    width: 90vw;
-    max-width: 628px;
-    height: 66px;
-    max-height: 100px;
-    z-index: 1;
-  }
-}
-
-main #h1sec #conobutt {
-  margin-left: 0;
 }
 
 main p {
@@ -344,9 +278,145 @@ main .botones:hover {
   font-size: 22px;
 }
 
+@media screen and (min-width: 1025px) {
+  main h2 {
+    font-size: 48px;
+    font-weight: 400;
+    margin-left: 200px;
+  }
+}
+
+main #h1sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+  margin-left: 16px;
+}
+
+main #h1sec h1 {
+  font-weight: 400;
+  font-size: 36px;
+  color: #060a24;
+  letter-spacing: 0;
+  line-height: 42px;
+  padding: 29px 10% 16px 0;
+}
+
+main #h1sec h1 #world {
+  text-decoration: line-through;
+}
+
+main #h1sec #h1p {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+  height: 66px;
+  margin-bottom: 36px;
+}
+
+main #h1sec #conobutt {
+  margin-left: 0;
+  width: 288px;
+}
+
+@media screen and (max-width: 519px) {
+  main #h1sec #h1p::after {
+    content: "Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.";
+    position: absolute;
+    width: 90%;
+    max-width: 350px;
+    height: 66px;
+    max-height: 100px;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  main #h1sec #h1p {
+    width: 90vw;
+    height: 48px;
+    margin-bottom: 56px;
+  }
+  main #h1sec #h1p::after {
+    content: "El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.";
+    position: absolute;
+    width: 90vw;
+    max-width: 628px;
+    height: 48px;
+    max-height: 100px;
+    z-index: 1;
+  }
+  main #h1sec #dot {
+    color: #0000ec;
+  }
+  main #h1sec #conobutt {
+    width: 226px;
+    height: 56px;
+    margin: 0 0 5px 0;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  main #h1sec {
+    margin-left: 200px;
+  }
+  main #h1sec h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 120px 0 0 0;
+    font-size: 64px;
+    height: 204px;
+  }
+  main #h1sec h1 #world {
+    width: 179px;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #h1sec p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+main #iframesec {
+  width: 100%;
+}
+
 main #iframesec #episodios {
   color: #fff;
-  margin: 20% 0px 15.5px 16px;
+  margin: 64px 0px 15.5px 16px;
+}
+
+main #iframesec #iframes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[4];
+  -ms-grid-columns: (1fr)[1];
+      grid-template: repeat(4, 1fr)/repeat(1, 1fr);
+  width: 100%;
 }
 
 main #iframesec .spoti {
@@ -356,52 +426,91 @@ main #iframesec .spoti {
   padding: 0px 11px 0px 11px;
 }
 
-@media screen and (min-width: 520px) {
-  main #iframesec .spoti {
-    width: 49%;
-  }
-}
-
 main #iframesec::after {
   content: "";
   background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
   position: absolute;
   width: 100%;
   height: 1203.5px;
-  -webkit-transform: skewy(-5deg) translate(0px, 16px);
-          transform: skewy(-5deg) translate(0px, 16px);
+  -webkit-transform: skewy(-5deg) translate(0px, 0px);
+          transform: skewy(-5deg) translate(0px, 0px);
   left: 0;
-  top: 63%;
+  top: 363px;
   z-index: -1;
   -webkit-transition: none;
   transition: none;
 }
 
-@media screen and (min-width: 520px) {
-  main #iframesec::after {
-    height: 720px;
-    top: 68%;
-  }
-  main #iframesec #episodios {
-    margin-top: 15%;
-  }
-}
-
 @media screen and (min-width: 425px) and (max-width: 519px) {
-  main #iframesec #episodios {
-    margin-top: 15%;
-  }
   main #iframesec::after {
     height: 1285px;
   }
 }
 
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 520px) and (max-width: 839px) {
+  main #iframesec::after {
+    height: 720px;
+    -webkit-transform: skewy(-5deg) translate(0px, 1vw);
+            transform: skewy(-5deg) translate(0px, 1vw);
+  }
+  main #iframesec #iframes {
+    -ms-grid-rows: (1fr)[2];
+    -ms-grid-columns: (1fr)[2];
+        grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 840px) and (max-width: 1024px) {
+  main #iframesec::after {
+    -webkit-transform: skewy(-5deg) translate(0px, 5vw);
+            transform: skewy(-5deg) translate(0px, 5vw);
+  }
   main #iframesec #episodios {
     margin-left: 200px;
   }
-  main #iframesec #if1, main #iframesec #if3 {
-    margin-left: 100px;
+  main #iframesec #iframes {
+    -ms-grid-rows: (1fr)[2];
+    -ms-grid-columns: (1fr)[2];
+        grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  main #iframesec {
+    height: 1042.6px;
+  }
+  main #iframesec::after {
+    -webkit-transform: skewy(-5deg) translate(0px, 10.5vw);
+            transform: skewy(-5deg) translate(0px, 10.5vw);
+    height: 913.62px;
+  }
+  main #iframesec #episodios {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 186px 0px 26px 200px;
+    font-size: 48px;
+    height: 62px;
+  }
+  main #iframesec #iframes {
+    -ms-grid-rows: (1fr)[2];
+    -ms-grid-columns: (1fr)[2];
+        grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+    gap: 72px;
+  }
+  main #iframesec #iframes .spoti {
+    max-width: 584px;
+  }
+  main #iframesec #iframes #if1,
+  main #iframesec #iframes #if3 {
+    justify-self: flex-end;
+  }
+  main #iframesec #iframes #if2,
+  main #iframesec #iframes #if4 {
+    justify-self: flex-start;
   }
 }
 
@@ -455,8 +564,9 @@ main #phonesect #dedonde p {
 }
 
 @media screen and (min-width: 1025px) {
-  main #phonesect #phonesect {
-    width: 50%;
+  main #phonesect img {
+    -webkit-transform: translate(0px, -10vw);
+            transform: translate(0px, -10vw);
   }
   main #phonesect #dedonde {
     width: 50%;
@@ -464,9 +574,21 @@ main #phonesect #dedonde p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    padding-left: 121px;
+  }
+  main #phonesect #dedonde h2 {
+    width: 399px;
+    height: 62px;
+    margin-top: 21px;
+    margin-left: 10px;
+  }
+  main #phonesect #dedonde p {
+    width: 464px;
+    height: 204px;
+    font-size: 16px;
+    margin-top: 18px;
+    padding: 0;
+    margin-left: 12px;
   }
 }
 
@@ -487,22 +609,33 @@ main #imgssect h2 {
   width: 100%;
 }
 
-main #imgssect img {
-  width: 100vw;
+main #imgssect div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[6];
+  -ms-grid-columns: (1fr)[1];
+      grid-template: repeat(6, 1fr)/repeat(1, 1fr);
+  width: 100%;
+}
+
+main #imgssect div img {
+  width: 100%;
   height: auto;
 }
 
 @media screen and (min-width: 425px) {
-  main #imgssect img {
-    width: 50vw;
-    height: auto;
+  main #imgssect div {
+    -ms-grid-rows: (1fr)[3];
+    -ms-grid-columns: (1fr)[2];
+        grid-template: repeat(3, 1fr)/repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 730px) {
-  main #imgssect img {
-    width: 33.33vw;
-    height: auto;
+  main #imgssect div {
+    -ms-grid-rows: (1fr)[2];
+    -ms-grid-columns: (1fr)[3];
+        grid-template: repeat(2, 1fr)/repeat(3, 1fr);
   }
 }
 
@@ -525,21 +658,31 @@ main #iconsect h2 {
   margin-bottom: 37px;
 }
 
-main #iconsect img {
-  width: 104px;
-  height: 104px;
-  margin: 0px 108px 13px 108px;
+main #iconsect div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[8];
+  -ms-grid-columns: (1fr)[1];
+      grid-template: repeat(8, 1fr)/repeat(1, 1fr);
+  width: 100%;
+  justify-items: center;
 }
 
-main #iconsect .iconlabelmarg {
+main #iconsect div img {
+  width: 104px;
+  height: 104px;
+  margin: 0px 0px 13px 0px;
+}
+
+main #iconsect div .iconlabelmarg {
   margin-bottom: 65px;
 }
 
-main #iconsect #labic1 {
+main #iconsect div #labic1 {
   margin-bottom: 49px;
 }
 
-main #iconsect label {
+main #iconsect div label {
   width: 288px;
   margin: 0px 16px 42px 16px;
   font-family: "IBM Plex Sans", sans-serif;
@@ -548,6 +691,45 @@ main #iconsect label {
   color: #060a24;
   letter-spacing: 0;
   text-align: center;
+}
+
+@media screen and (min-width: 425px) and (max-width: 1024px) {
+  main #iconsect div {
+    -ms-grid-rows: (1fr)[4];
+    -ms-grid-columns: (1fr)[2];
+        grid-template: repeat(4, 1fr)/repeat(2, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #iconsect div label {
+    margin: 0px;
+    width: 100%;
+  }
+  main #iconsect div .iconlabelmarg {
+    margin-bottom: 0px;
+  }
+  main #iconsect div #labic1 {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  main #iconsect div {
+    -ms-grid-rows: (1fr)[2];
+    -ms-grid-columns: (1fr)[4];
+        grid-template: repeat(2, 1fr)/repeat(4, 1fr);
+    width: 72%;
+  }
+  main #iconsect div label {
+    margin: 0px;
+    width: 100%;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+  }
+  main #iconsect div h2 {
+    margin-left: 0;
+  }
 }
 
 main #lastmsect {
@@ -562,6 +744,7 @@ main #lastmsect {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
+  width: 100%;
 }
 
 main #lastmsect #newsdiv {
@@ -577,11 +760,14 @@ main #lastmsect #newsdiv {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  width: 100%;
+  height: 341px;
 }
 
 main #lastmsect #newsdiv h2 {
   margin: 64px 16px 36px 16px;
   color: #fff;
+  width: 100%;
 }
 
 main #lastmsect #newsdiv::after {
@@ -599,22 +785,54 @@ main #lastmsect #newsdiv button {
   margin-bottom: 67px;
 }
 
+@media screen and (min-width: 540px) and (max-width: 1024px) {
+  main #lastmsect #newsdiv {
+    height: 518px;
+  }
+  main #lastmsect #newsdiv h2 {
+    margin-top: 220px;
+    font-size: 48px;
+  }
+  main #lastmsect #newsdiv::after {
+    height: 110%;
+    -webkit-transform: skewy(-5deg) translate(0px, 24px);
+            transform: skewy(-5deg) translate(0px, 24px);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  main #lastmsect #newsdiv {
+    height: 518px;
+    background-image: url("blueback.svg");
+  }
+  main #lastmsect #newsdiv h2 {
+    margin-top: 213px;
+  }
+  main #lastmsect #newsdiv::after {
+    display: none;
+  }
+}
+
 footer {
   background-color: #fff;
   width: 100%;
   height: 121px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  z-index: 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[2];
+  -ms-grid-columns: 100%;
+      grid-template: repeat(2, 1fr)/100%;
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer #nested-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (20%)[5];
+      grid-template-columns: repeat(5, 20%);
 }
 
 footer p {
@@ -630,7 +848,7 @@ footer p {
 }
 
 footer a {
-  width: 20%;
+  width: 100%;
   text-decoration: none;
   -webkit-text-decoration-color: #060a24;
           text-decoration-color: #060a24;
@@ -640,9 +858,19 @@ footer a i {
   color: #060a24;
 }
 
-@media screen and (min-width: 420px) and (max-width: 760px) {
+@media screen and (min-width: 1025px) {
   footer {
-    height: 133px;
+    height: 95px;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 77% 23%;
+        grid-template: 1fr / 77% 23%;
+    text-align: left;
+  }
+  footer p {
+    margin-left: 100px;
+  }
+  footer #nested-grid {
+    margin-right: 100px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

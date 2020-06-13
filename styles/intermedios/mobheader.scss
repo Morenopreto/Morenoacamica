@@ -4,7 +4,6 @@ header {
   width: 100%;
   background-color: $bg-color;
   height: 44px;
-  border-bottom: rgba(0, 0, 0, 0.3) 1.5px solid;
 
   div {
     position: relative;
@@ -57,8 +56,6 @@ header {
   .menucheckbox:checked + .burger span {
     height: 0;
     width: 0;
-    
-      
   }
   .menucheckbox:checked + .burger span:before,
   .menucheckbox:checked + .burger span:after {
@@ -69,13 +66,13 @@ header {
     transform: rotate(225deg);
     width: 18px;
     -webkit-transition: all 0.3s;
-        transition: all 0.3s;
+    transition: all 0.3s;
   }
   .menucheckbox:checked + .burger span:after {
     transform: rotate(-225deg);
     width: 18px;
     -webkit-transition: all 0.3s;
-        transition: all 0.3s;
+    transition: all 0.3s;
   }
   .navdiv {
     position: relative;
@@ -107,12 +104,11 @@ header {
       overflow: hidden;
       color: $bg-color;
       text-align: left;
-      
+
       &:hover,
       &:active,
       &:focus,
       &:visited {
-        
         background: $hov-bot-color;
       }
     }
@@ -120,7 +116,6 @@ header {
   #menuinput:checked ~ nav ul a {
     height: 50px;
     transition: none;
-    
   }
 
   @media screen and (min-width: 600px) {
@@ -134,7 +129,6 @@ header {
       display: none;
     }
     .navdiv {
-      
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
@@ -161,12 +155,19 @@ header {
               color: $colorr;
               text-align: center;
 
-              &:hover,            
+              &:hover {
+                color: #00f3bb;
+                text-decoration: line-through;
+              }
+              &:active {
+                color: #060a24;
+                text-decoration: line-through;
+              }
+
+              &:hover,
               &:focus,
               &:visited {
-                text-decoration: none;
                 background: none;
-                
                 font-size: 20px;
               }
             }
