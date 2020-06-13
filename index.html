@@ -17,7 +17,6 @@
   </head>
   <body>
     <header id="prueba">
-      
       <div class="navdiv">
         <img src="assets/logo.svg" alt="logo-blue-dot" />
         <input
@@ -26,12 +25,18 @@
           id="menuinput"
           class="menucheckbox"
         />
-        <label for="menuinput" class="burger menu" tabindex="1"><span></span></label>
+        <label for="menuinput" class="burger menu" tabindex="1"
+          ><span></span
+        ></label>
         <nav>
           <ul>
-            <li class="navli"><a href="#episodios" tabindex="2">EPISODIOS</a></li>
+            <li class="navli">
+              <a href="#episodios" tabindex="2">EPISODIOS</a>
+            </li>
             <li class="navli"><a href="#dedonde" tabindex="3">NOSOTROS</a></li>
-            <li class="navli"><a href="#imgssect" tabindex="4">ENTREVISTAS</a></li>
+            <li class="navli">
+              <a href="#imgssect" tabindex="4">ENTREVISTAS</a>
+            </li>
             <li class="navli"><a href="#iconsect" tabindex="5">TÓPICOS</a></li>
           </ul>
         </nav>
@@ -45,107 +50,104 @@
             >.</span
           >
         </h1>
-        <p id="h1p">        
-         
-        </p>
+        <p id="h1p"></p>
         <button id="conobutt" class="botones">CONOCÉ MÁS</button>
       </section>
-      <div id="iframesec" class="blueline">
-        <h2 id="episodios" name="episodios">Episodios</h2>
-        <iframe
-          class="spoti"
-          id="if1"
-          src="https://open.spotify.com/embed-podcast/show/2ySVrxGkN6n6frMTo9Nsrt"
-          width="100%"
-          height="232"
-          frameborder="0"
-          allowtransparency="true"
-          allow="encrypted-media"
-        ></iframe>
-        <iframe
-          class="spoti"
-          id="if2"
-          src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby"
-          width="100%"
-          height="232"
-          frameborder="0"
-          allowtransparency="true"
-          allow="encrypted-media"
-        ></iframe>
-        <iframe
-          class="spoti"
-          id="if3"
-          src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv"
-          width="100%"
-          height="232"
-          frameborder="0"
-          allowtransparency="true"
-          allow="encrypted-media"
-        ></iframe>
-        <iframe
-          class="spoti"
-          id="if4"
-          src="https://open.spotify.com/embed-podcast/show/2Iibd5A6R7mxkCm4NwNmUn"
-          width="100%"
-          height="232"
-          frameborder="0"
-          allowtransparency="true"
-          allow="encrypted-media"
-        ></iframe>
-      </div>
+      <section id="iframesec" class="blueline">
+        <h2 id="episodios">Episodios</h2>
+        <div id="iframes">
+          <iframe
+            class="spoti"
+            id="if1"
+            src="https://open.spotify.com/embed-podcast/show/2ySVrxGkN6n6frMTo9Nsrt"
+            width="100%"
+            height="232"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+          <iframe
+            class="spoti"
+            id="if2"
+            src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby"
+            width="100%"
+            height="232"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+          <iframe
+            class="spoti"
+            id="if3"
+            src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv"
+            width="100%"
+            height="232"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+          <iframe
+            class="spoti"
+            id="if4"
+            src="https://open.spotify.com/embed-podcast/show/2Iibd5A6R7mxkCm4NwNmUn"
+            width="100%"
+            height="232"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+        </div>
+      </section>
 
       <section id="phonesect">
         <img src="assets/phone.png" alt="phone" id="phoneimg" />
-        <div id="dedonde" name="dedonde">
-          <h2 >De dónde venimos</h2>
+        <div id="dedonde">
+          <h2>De dónde venimos</h2>
           <p>
             Our posturings, our imagined self-importance, the delusion that we
             have some privileged position in the Universe, are challenged by
-            this point of pale light. Our planet is a lonely speck in the great
-            enveloping cosmic dark. In our obscurity, in all this vastness,
-            there is no hint that help will come from elsewhere to save us from
-            ourselves.
+            this point of pale light.<br />
+            Our planet is a lonely speck in the great enveloping cosmic dark. In
+            our obscurity, in all this vastness, there is no hint that help will
+            come from elsewhere to save us from ourselves.
           </p>
         </div>
       </section>
 
-      <section id="imgssect" name="entrevistas">
+      <section id="imgssect">
         <h2 class="" id="h2img">Invitadas/os estelares</h2>
-        <img class=" " src="assets/grace-hopper.png" alt="grace-hopper" />
-        <img class="" src="assets/Katie-Bouman.png" alt="Katie-Bouman" />
-        <img
-          class=" "
-          src="assets/Margaret_Hamilton.png"
-          alt="Margaret_Hamilton"
-        />
-        <img
-          class=" "
-          src="assets/An E.R.A.Univac 1103 computer in the 1950s.png"
-          alt="era1103"
-        />
-        <img
-          class=" "
-          src="assets/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png"
-          alt="worlds-fst-program-comp"
-        />
-        <img class="  " src="assets/susan-kare.png" alt="susan-kare" />
+        <div>
+          <img class=" " src="assets/grace-hopper.png" alt="grace-hopper" />
+          <img class="" src="assets/Katie-Bouman.png" alt="Katie-Bouman" />
+          <img
+            class=" "
+            src="assets/Margaret_Hamilton.png"
+            alt="Margaret_Hamilton"
+          />
+          <img class=" " src="assets/ERA.png" alt="era1103" />
+          <img
+            class=" "
+            src="assets/Computer-operators.png"
+            alt="worlds-fst-program-comp"
+          />
+          <img class="  " src="assets/susan-kare.png" alt="susan-kare" />
+        </div>
       </section>
 
-      <section id="iconsect" name="iconsect">
-        <h2 class="" id="h2icon" >Algunos de nuestros temas</h2>
-
-        <img src="assets/icon1.svg" alt="icon1" id="icon1" class="icon" />
-        <label for="icon1" class="" id="labic1">Trabajo remoto</label>
-        <img src="assets/icon2.svg" alt="icon2" id="icon2" class="icon" />
-        <label for="icon2" class="iconlabelmarg" id="labic2"
-          >Repensando la programación</label
-        >
-        <img src="assets/icon3.svg" alt="icon3" id="icon3" class="icon" />
-        <label for="icon3" class="iconlabelmarg" id="labic3"
-          >Bases del código</label
-        >
-        <img src="assets/icon4.svg" alt="icon4" id="icon4" class="icon" />
-        <label for="icon4" class="" id="labic4">Seguridad informática</label>
+      <section id="iconsect">
+        <h2 class="" id="h2icon">Algunos de nuestros temas</h2>
+        <div>
+          <img src="assets/icon1.svg" alt="icon1" id="icon1" class="icon" />
+          <label class="" id="labic1">Trabajo remoto</label>
+          <img src="assets/icon2.svg" alt="icon2" id="icon2" class="icon" />
+          <label class="iconlabelmarg" id="labic2"
+            >Repensando la programación</label
+          >
+          <img src="assets/icon3.svg" alt="icon3" id="icon3" class="icon" />
+          <label class="iconlabelmarg" id="labic3">Bases del código</label>
+          <img src="assets/icon4.svg" alt="icon4" id="icon4" class="icon" />
+          <label class="" id="labic4">Seguridad informática</label>
+        </div>
       </section>
 
       <section id="lastmsect">
@@ -158,21 +160,23 @@
 
     <footer>
       <p class="ft">© 2019— Hello blue pale dot</p>
+      <div id="nested-grid">
       <a href="https://open.spotify.com/playlist/5fo0ASdBMPjeLTO3YUATZR"
-        ><i id="" class="fab fa-spotify i ft"></i
+        ><i class="fab fa-spotify i ft"></i
       ></a>
       <a href="https://www.instagram.com/morepreto/"
-        ><i id="" class="fab fa-instagram i ft"></i
+        ><i class="fab fa-instagram i ft"></i
       ></a>
       <a href="https://twitter.com/WorlWindWriting/status/1104096543336935425"
-        ><i id="" class="fab fa-twitter i ft"></i
+        ><i class="fab fa-twitter i ft"></i
       ></a>
       <a href="https://www.facebook.com/"
-        ><i id="" class="fab fa-facebook i ft"></i
+        ><i class="fab fa-facebook i ft"></i
       ></a>
       <a href="https://web.telegram.org/#/login"
-        ><i id="" class="fab fa-telegram i ft"></i
+        ><i class="fab fa-telegram i ft"></i
       ></a>
+    </div>
     </footer>
   </body>
 </html>
